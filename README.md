@@ -1,3 +1,3 @@
 # prayer_static
 
-https://github.com/NabilAlshahari/prayer_static.git
+https://NabilAlshahari.github.io/prayer_static/
