@@ -1,0 +1,152 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Almarai',sans-serif;
+    text-decoration: none;
+    direction:rtl;
+    
+}
+
+:root{
+    --first-color:#277BC0;
+    --f1-color:#3AB4F2;
+    --second-color:#FFB200;
+    --s2-color:#FFCB42;
+}
+.boster{
+    height: 800px;
+    padding: 20px;
+    min-height: calc(100vh - 30px);
+    margin: 15px; 
+    background:linear-gradient(45deg, #EFEAD8 ,#EEEEEE);
+    border-radius:15px;
+    position: relative;
+    overflow: hidden;
+    z-index: 3;
+}
+.boster::before,
+.boster::after{
+    content: "";
+    width: 500px;
+    height: 500px;
+    background-color: #3AB4F2;
+    opacity: 0.2;
+    position: absolute;
+    border-radius: 50%;
+    z-index: -1;
+
+}
+.boster::before{
+    top: -150px;
+    right: -100px;
+}
+.boster::after{
+    bottom: -150px;
+    left: -150px;
+}
+.boster .time-now{
+    margin-top: 50px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.boster .time-now h1{
+    font-size: 50px;
+    font-weight: bold;
+    color: var(--first-color);
+}
+.boster .time-now small{
+    margin-right: 10px;
+    color: var(--f1-color);
+}
+.boster .date{
+    display:grid;
+    place-items: center;
+    font-weight: normal;
+    color: gray;
+}
+.boster .city select{
+    background:none;
+    width: 150px;
+    height: 30px;
+    border-radius:20px;
+    display: block;
+    padding: 5px 15px;
+    border: 1px solid #fff;
+}
+@media(max-width:770px){
+    .boster .city{
+        display: flex;
+        justify-content: center;
+    }
+}
+.boster .boster .city select:focus{
+    background: none;
+    margin-left:none;
+}
+.fa-calendar-days{
+    font-size: 35px;
+    margin-left: 15px;
+}
+.box{
+    background: var(--first-color);
+    width: 100px;
+    height: 100px;
+    position: relative;
+    text-align: center;
+    z-index: 1;
+    border-radius: 5px;
+    color: var(--second-color);
+    margin: 50px;
+}
+.box .active,
+.box .active::before,
+.box .active::after{
+    background-color: var(--first-color);
+    color: #faf7e6;
+}
+.box::before,
+.box::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100px;
+    width: 100px;
+    background: var(--first-color);
+    z-index: -1;
+    border-radius: 5px;
+}
+.box::before{
+    transform:rotate(30deg);
+}
+.box::after{
+    transform: rotate(60deg);
+}
+.prayer-times{
+    display:flex;
+    justify-content: center;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    
+}
+
+.prayer-times .box .pray-time{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #EEEEEE;
+
+}
+.prayer-times.box .pray-time small{
+    margin-right: 50px;
+}
+.prayer-times.box .bi{
+    color: #EEEEEE;
+    font-weight:bold;
+    padding-bottom: 7px;
+}
